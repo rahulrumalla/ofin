@@ -1,13 +1,12 @@
 <template>
-  <v-container class="pa-2">
+  <v-container>
     <v-layout 
       row 
       wrap>
       <v-flex
         xs12 
         md6 
-        class="pa-1"
-        fill-height>
+        class="pa-1">
         <v-card 
           flat
           class="mock-widget-card indigo accent-4 white--text">
@@ -54,7 +53,6 @@
       <v-flex
         xs12 
         md6 
-        fill-height
         class="pa-1">
         <v-card 
           flat
@@ -101,12 +99,10 @@
         </v-card> 
       </v-flex>
     </v-layout>
-    <v-card 
-      flat
-      class="mt-1 mx-1">
-      <!-- style="border-radius: 10px; border-style: solid; border-width: 2px; border-color: #304FFE;" -->
-      <v-card-title 
-        class="headline pa-0 my-4 primary--text">
+    <div
+      class="mt-4">
+      <div
+        class="headline primary--text grey lighten-4 pb-2 px-1">
         <v-layout>
           <v-flex 
             xs6
@@ -133,8 +129,10 @@
             </v-btn>
           </v-flex>
         </v-layout>
-      </v-card-title>
-      <v-card-text class="py-0 px-1">
+      </div>
+      <div
+        class="white pa-4"
+        style="border-radius: 15px;">
         <v-layout
           v-for="(t,i) in transactions" 
           :key="i" 
@@ -181,8 +179,8 @@
             </v-btn>
           </v-flex>
         </v-layout>
-      </v-card-text>
-    </v-card>
+      </div>
+    </div>
   </v-container>
 </template>
 
@@ -210,5 +208,5 @@ export default {
 <style lang="stylus">
 .mock-widget-card
   height: 170px;
-  border-radius: 10px;
+  border-radius: 15px;
 </style>

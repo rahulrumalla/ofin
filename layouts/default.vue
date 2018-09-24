@@ -1,10 +1,10 @@
 <template>
-  <v-app class="white">
+  <v-app class="grey lighten-4">
     <v-toolbar 
       fixed
       app
       flat
-      class="white">
+      class="">
       <span class="headline primary--text font-weight-bold">
         <v-icon class="primary--text">fa-leaf</v-icon>
         Ofin
