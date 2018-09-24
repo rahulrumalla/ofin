@@ -103,10 +103,10 @@
     </v-layout>
     <v-card 
       flat
-      class="mt-1 mx-1"
-      style="border-radius: 10px; border-style: solid; border-width: 2px; border-color: #304FFE;">
+      class="mt-1 mx-1">
+      <!-- style="border-radius: 10px; border-style: solid; border-width: 2px; border-color: #304FFE;" -->
       <v-card-title 
-        class="headline pb-2 primary--text">
+        class="headline pa-0 my-4 primary--text">
         <v-layout>
           <v-flex 
             xs6
@@ -134,19 +134,7 @@
           </v-flex>
         </v-layout>
       </v-card-title>
-      <v-card-text>
-        <!-- <v-data-table
-          :headers="transactionHeaders"
-          :items="transactions"
-        >
-          <template 
-            slot="items"
-            slot-scope="props">
-            <td class="text-xs-left">{{ props.item.Date }}</td>
-            <td class="text-xs-left">{{ props.item.Merchant }}</td>
-            <td class="text-xs-right">{{ props.item.Amount }}</td>
-          </template>
-        </v-data-table> -->
+      <v-card-text class="py-0 px-1">
         <v-layout
           v-for="(t,i) in transactions" 
           :key="i" 
@@ -188,8 +176,8 @@
               large
               round
               depressed
-              class="primary">
-              Load More
+              class="primary subheading">
+              Show More
             </v-btn>
           </v-flex>
         </v-layout>
