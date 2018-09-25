@@ -30,9 +30,9 @@ module.exports = {
   */
   css: [
     'vuetify/src/stylus/main.styl',
-    '~/assets/style/app.styl',
+    '~/assets/style/font-awesome.css',
     '~/assets/style/fonts.styl',
-    '~/assets/style/font-awesome.css'
+    '~/assets/style/app.styl'
   ],
 
   /*

@@ -4,11 +4,24 @@
       fixed
       app
       flat
-      class="">
-      <span class="headline primary--text font-weight-bold">
+      class="primary--text hl">
+      <span class="font-weight-bold">
         <v-icon class="primary--text">fa-leaf</v-icon>
         Ofin
+        <span class="body-2">alpha</span>
       </span>
+      <v-spacer />
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn 
+          v-for="i in toolbarMenuItems"
+          :key="i.text"
+          :to="i.to"
+          flat
+          class="primary--text font-weight-bold tt"
+          style="text-transform: none">
+          {{ i.text }}
+        </v-btn>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <nuxt />
@@ -21,8 +34,25 @@
     data() {
       return {
         clipped: false,
-        title: 'Vuetify.js'
+        title: 'Vuetify.js',
+        toolbarMenuItems: [
+          { text: 'Dashboard', to: '/' },
+          { text: 'Exchange', to: '/exchange' },
+          { text: 'Blend', to: '/blend' },
+        ]
       }
     }
   }
 </script>
+
+<style lang="stylus">
+.v-toolbar a.v-btn--active
+  border-style solid;
+  border-color $primary;
+  border-width 0 0 4px 0;
+
+.v-toolbar a.v-btn--active:before 
+  background-color white;
+
+</style>
+
