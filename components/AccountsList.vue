@@ -9,7 +9,7 @@
         <v-flex 
           xs8
           class="d1">
-          My Accounts
+          Accounts
         </v-flex>
         <v-flex 
           xs4

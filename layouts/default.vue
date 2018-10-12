@@ -21,6 +21,12 @@
           style="text-transform: none">
           {{ i.text }}
         </v-btn>
+        <v-btn
+          flat
+          class="primary--text font-weight-bold tt"
+          style="text-transform: none">
+          Log Out
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
@@ -37,7 +43,7 @@
         title: 'Vuetify.js',
         toolbarMenuItems: [
           { text: 'Dashboard', to: '/' },
-          { text: 'Exchange', to: '/exchange' },
+          { text: 'X-Change', to: '/exchange' },
           { text: 'Blend', to: '/blend' },
         ]
       }

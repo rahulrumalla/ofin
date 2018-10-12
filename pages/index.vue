@@ -103,15 +103,27 @@
       class="mt-1">
       <v-flex
         xs12
-        md5
+        md6
         class="pa-1">
-        <accounts-list />
+        <accounts-list 
+          style="min-height: 475px" />
       </v-flex>
       <v-flex 
         xs12
-        md7
+        md6
         class="pa-1">
-        <transactions />
+        <assets-list
+          style="min-height: 475px" />
+      </v-flex>
+    </v-layout>
+    <v-layout
+      row
+      wrap
+      class="mt-1">
+      <v-flex 
+        xs12
+        class="pa-1">
+        <transactions-list />
       </v-flex>
     </v-layout>
   </v-container>
@@ -119,12 +131,14 @@
 
 <script>
 import AccountsList from '~/components/AccountsList'
-import Transactions from '~/components/Transactions'
+import AssetsList from '~/components/AssetsList'
+import TransactionsList from '~/components/TransactionsList'
 
 export default {
   components: {
     AccountsList,
-    Transactions
+    AssetsList,
+    TransactionsList
   },
   data () {
     return {
