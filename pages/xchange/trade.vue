@@ -1,8 +1,8 @@
 <template>
-  <v-container>
+  <tabbed-headers-layout>
     <v-card
       flat
-      class="white"
+      class="white mt-2"
       style="border-radius: 5px;">
       <v-card-title
         class="primary--text d1 px-3">
@@ -156,11 +156,16 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-  </v-container>
+  </tabbed-headers-layout>
 </template>
 
 <script>
+import TabbedHeadersLayout from '~/components/xchange/TabbedHeadersLayout'
+
 export default {
+  components: {
+    TabbedHeadersLayout
+  },
   data () {
     return {
       assetsAvailable: [
@@ -171,7 +176,8 @@ export default {
       ],
       selectedMakerAsset: {},
       selectedMakerAssetQuantity: 0,
-      selectedTakerAsset: {}
+      selectedTakerAsset: {},
+      selectedTakerAssetQuantity: 0,
     }
   },
   methods: {
