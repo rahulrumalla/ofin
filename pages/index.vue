@@ -100,7 +100,7 @@
     <v-layout 
       row 
       wrap 
-      class="mt-1">
+      class="mt-0">
       <v-flex
         xs12
         md6
@@ -119,7 +119,7 @@
     <v-layout
       row
       wrap
-      class="mt-1">
+      class="mt-0">
       <v-flex 
         xs12
         class="pa-1">
@@ -151,10 +151,3 @@ export default {
   }
 }
 </script>
-
-
-<style lang="stylus">
-.mock-widget-card
-  height: 170px;
-  border-radius: 5px;
-</style>

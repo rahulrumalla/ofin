@@ -38,11 +38,17 @@
         :key="i" 
         row
         class="my-4">
-        <v-flex xs3>
-          <div class="subheading  mb-0 black--text">{{ t.Date }}</div>
-          <!-- <div class="grey--text mt-2">{{ t.Date }}</div> -->
+        <v-flex 
+          xs2
+          class="text-xs-center">
+          <div class="tt black--text">
+            {{ new Date(t.Date).getDate() }}
+          </div>
+          <div class="subheading mt-2 grey--text">
+            {{ getMonthName(t.Date) }} {{ (new Date(t.Date).getFullYear()).toString().substring(2) }}
+          </div>
         </v-flex>
-        <v-flex xs5>
+        <v-flex xs6>
           <div class="tt">
             <!-- <span class="pr-1">
               <v-icon 
@@ -56,9 +62,9 @@
           <div class="subheading grey--text mt-2">Metamask Main</div>
         </v-flex>
         <v-flex 
-          class="text-xs-right tt"
+          class="text-xs-right"
           xs4>
-          <div :class="{'red--text': t.Amount < 0, 'green--text': t.Amount > 0}">
+          <div :class="{'tt red--text': t.Amount < 0, 'tt green--text': t.Amount > 0}">
             {{ t.Amount.toFixed(3) }}
             <span class="pl-1">{{ t.Currency }}</span>
           </div>
@@ -66,6 +72,16 @@
             {{ (t.Amount * 212).toFixed(2) }}
             <span class="pl-1">USD</span>
           </div>
+        </v-flex>
+        <v-flex>
+          <v-btn 
+            icon>
+            <v-icon 
+              medium
+              class="grey--text">
+              more_vert
+            </v-icon>
+          </v-btn>
         </v-flex>
       </v-layout>
       <v-layout 
@@ -78,7 +94,7 @@
             round
             depressed
             class="primary subheading">
-            Show All Transactions
+            Show More Transactions
           </v-btn>
         </v-flex>
       </v-layout>
@@ -96,6 +112,13 @@ export default {
         {Date: '21 Sep 2018', Merchant: 'DevCon4 Ticket', Amount: -2.519, Currency: 'ETH', Color: 'pink'},
         {Date: '19 Sep 2018', Merchant: 'Gitcoin Bounty', Amount: +0.500, Currency: 'ETH', Color: 'success'}
       ]
+    }
+  },
+  methods: {
+    getMonthName(d) {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      let date = new Date(d)
+      return months[date.getMonth()-1]
     }
   }
 }

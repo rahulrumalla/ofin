@@ -8,7 +8,7 @@
       <span class="font-weight-bold">
         <v-icon class="primary--text">fa-leaf</v-icon>
         Ofin
-        <span class="body-2">alpha</span>
+        <span class="body-2">prototype</span>
       </span>
       <v-spacer />
       <v-toolbar-items class="hidden-sm-and-down">
@@ -43,8 +43,11 @@
         title: 'Vuetify.js',
         toolbarMenuItems: [
           { text: 'Dashboard', to: '/' },
-          { text: 'X-Change', to: '/exchange' },
+          { text: 'X-Change', to: '/xchange' },
           { text: 'Blend', to: '/blend' },
+          { text: 'Invest', to: '/invest' },
+          { text: 'Offers', to: '/offers' },
+          { text: 'Anon ID', to: '/anonid' },
         ]
       }
     }

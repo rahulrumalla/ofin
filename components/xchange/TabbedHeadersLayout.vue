@@ -5,17 +5,7 @@
       slider-color="primary" 
       fixed-tabs>
       <v-tab 
-        :to="'/xchange/buy'"
-        class="tt primary--text">
-        BUY
-      </v-tab>
-      <v-tab 
-        :to="'/xchange/sell'"
-        class="tt primary--text">
-        SELL
-      </v-tab>
-      <v-tab 
-        :to="'/xchange/trade'"
+        :to="'/xchange'"
         class="tt primary--text">
         TRADE
       </v-tab>
@@ -25,7 +15,6 @@
         YOUR ORDERS
       </v-tab>
     </v-tabs>
-    <v-divider class="mx-4" />
     <v-flex>
       <slot/>
     </v-flex>
